@@ -1,6 +1,8 @@
 
 import { Factory } from "./factory";
 import { LessonsPack } from "./lessons";
+// create sensitive.ts and add line with your seed phrase: 
+// export const mnemonic = "guilt oil crisp..."
 import { mnemonic } from "./sensitive";
 
 async function main() {    
