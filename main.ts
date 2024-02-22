@@ -13,7 +13,7 @@ async function main() {
     }
     console.log("wallet deployed!");
 
-    await LessonsPack[process.argv[2] as keyof typeof LessonsPack](container);
+    await LessonsPack[process.argv[2].replace(".", "_") as keyof typeof LessonsPack](container);
 }
 
 main();
