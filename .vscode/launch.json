@@ -3,10 +3,16 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [               
+    "configurations": [
         {
-            "command": "npx ts-node main.ts ${input:lessonNumber}",
-            "name": "Run npm start",
+            "command": "npx ts-node lesson1/main.ts ${input:lessonNumber}",
+            "name": "Debug Lessons 1.x",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "echo 'npm run start|build|test - nothing to debug'",
+            "name": "Lessons 2 - Test smartcontract",
             "request": "launch",
             "type": "node-terminal"
         }
