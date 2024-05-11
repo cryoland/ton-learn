@@ -4,7 +4,7 @@ import { Blockchain, SandboxContract, TreasuryContract } from "@ton/sandbox";
 import { TestContract } from "../wrappers/TestContract";
 import "@ton/test-utils";
 
-describe("test tests", () => {
+describe("test_contract", () => {
     let blockchain: Blockchain;
     let myContract: SandboxContract<TestContract>;
     let initWallet: SandboxContract<TreasuryContract>;
