@@ -45,6 +45,7 @@ const const::min_tons_for_storage = 10000000;
     return();
   }
 	
+  ;; withdrawal
   if (op == 3) {
     throw_unless(103, equal_slice_bits(sender_address, owner_address));
 
