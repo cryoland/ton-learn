@@ -1,4 +1,4 @@
-import { hex } from "../build/main.compiled.json";
+import { hex } from "../build/test.compiled.json";
 import {
   beginCell,
   Cell,
@@ -17,7 +17,7 @@ async function deployScript() {
   console.log(
     "================================================================="
   );
-  console.log("Deploy script is running, let's deploy our main.fc contract...");
+  console.log("Deploy script is running, let's deploy our contract...");
 
   const codeCell = Cell.fromBoc(Buffer.from(hex, "hex"))[0];
   const dataCell = new Cell();
@@ -48,8 +48,7 @@ async function deployScript() {
     }) +
     "?" +
     qs.stringify({
-      text: "Thanks for TON course from Cryoland 🦄",
-      amount: toNano(0.01234).toString(10),
+      amount: toNano(0.02).toString(10),
       init: stateInitCell.toBoc({ idx: false }).toString("base64"),
     });
 

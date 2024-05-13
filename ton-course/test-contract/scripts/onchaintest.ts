@@ -1,5 +1,5 @@
 import { Address, Cell, contractAddress, toNano } from "@ton/core";
-import { hex } from "../build/main.compiled.json";
+import { hex } from "../build/test.compiled.json";
 import { getHttpV4Endpoint } from "@orbs-network/ton-access";
 import { TonClient4 } from "@ton/ton";
 import qs from "qs";
@@ -37,8 +37,8 @@ async function onchainTestScript() {
     }) +
     "?" +
     qs.stringify({
-      text: "Thanks for TON course from Cryoland 🦄",
-      amount: toNano(0.01234).toString(10),
+      text: "Test",
+      amount: toNano(0.05).toString(10),
     });
 
   qrcode.generate(link, { small: true }, (code) => {

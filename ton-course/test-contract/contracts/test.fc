@@ -8,6 +8,10 @@
     ;; fetch int32 value from message
     int num = in_msg_body~load_uint(32);
 
+    if (num < 1) {
+        return ();
+    }
+
     ;; fetch current int32 sum from c4
     slice ds = get_data().begin_parse();
 	slice addr_c4 = ds~load_msg_addr(); 
